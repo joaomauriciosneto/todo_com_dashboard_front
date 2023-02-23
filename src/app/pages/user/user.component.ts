@@ -88,8 +88,8 @@ export class UserComponent implements OnInit {
   public btnSave() {
     if (this.formUser.invalid) return this.setFormInvalid();
 
-    if (this.isAdd()) return this.addUser();
-    this.editUser();
+    if (this.isAdd()) this.addUser();
+    else this.editUser();
   }
 
   private setFormInvalid() {
